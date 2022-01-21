@@ -1,0 +1,8 @@
+node_modules
+dist
+min
+out
+.yarn
+.pnp.cjs
+.pnp.loader.mjs
+test
