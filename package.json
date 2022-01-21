@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "The OpenDocs backend proxy.",
     "main": "dist/index.js",
-    "repository": "https://git.nosadnile.net/RedstoneWizard08/opendocs.git",
+    "repository": "https://github.com/opendocs-editor/proxy.git",
     "author": "Jacob Sapoznikow <jacob1coder@gmail.com>",
     "license": "MIT",
     "keywords": [
