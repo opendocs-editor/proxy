@@ -8,3 +8,4 @@ npmScopes:
 
 npmRegistries:
   //npm.pkg.github.com:
+    npmAuthToken: REPLACE_ME
