@@ -1,6 +1,6 @@
 {
     "name": "@opendocs-editor/proxy",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "The OpenDocs backend proxy.",
     "main": "dist/index.js",
     "repository": "https://github.com/opendocs-editor/proxy.git",
