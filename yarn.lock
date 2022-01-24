@@ -140,23 +140,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@opendocs-editor/authlib@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@opendocs-editor/authlib@npm:1.0.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40opendocs-editor%2Fauthlib%2F1.0.0%2Fab49053187e7d1f3a054fc325af8811dab1f139f76c11485f490fc0de6cde804"
+"@opendocs-editor/authlib@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@opendocs-editor/authlib@npm:1.1.2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40opendocs-editor%2Fauthlib%2F1.1.2%2F48afb2b50883e30302ad47985ad788d49648e4b19ad5ab96988b4448971b22e3"
   dependencies:
     adm-zip: ^0.5.9
     axios: ^0.24.0
     crypto: ^1.0.1
     express: ^4.17.2
+    final-fs: ^1.6.1
     fs: ^0.0.1-security
     google-auth-library: ^7.11.0
     googleapis: ^92.0.0
-    mongodb: latest
+    mongodb: ^4.3.1
     path: ^0.12.7
     query-string: ^7.1.0
     tar: ^6.1.11
     uuid: ^8.3.2
-  checksum: 200b5eb24022a3cb242a20ef226fbba12fb7d0aea9e17e20b9fa08825fb11c1045e78be8451ea9cb8aa5a0442a5abd93877f7bec7f39b7e98f1a849ab2cbae81
+  checksum: 4ca1712516f13c2e9e9821831bf343d8fb2084bc211eff64bff02c689d2f42c13643d91a6bfaa2b80b559f6c32a32d6fe82660bd0562cfd655e13f6e15bc9bbf
   languageName: node
   linkType: hard
 
@@ -166,7 +167,7 @@ __metadata:
   dependencies:
     "@node-minify/core": ^6.2.0
     "@node-minify/google-closure-compiler": ^6.2.0
-    "@opendocs-editor/authlib": ^1.0.0
+    "@opendocs-editor/authlib": ^1.1.2
     "@types/body-parser": ^1.19.2
     "@types/cookie-parser": ^1.4.2
     "@types/express": ^4.17.13
@@ -1797,6 +1798,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"final-fs@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "final-fs@npm:1.6.1"
+  dependencies:
+    node-fs: ~0.1.5
+    when: ~2.0.1
+  checksum: 112db1b2f4a7584bb077456eb65958e3862d99a8984fd72fee559c82d6058b80b1189d5e19e074b506b989d6645db7fc6625999d9c510c1b87679de0325a4fba
+  languageName: node
+  linkType: hard
+
 "finalhandler@npm:~1.1.2":
   version: 1.1.2
   resolution: "finalhandler@npm:1.1.2"
@@ -2904,7 +2915,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb@npm:^4.3.1, mongodb@npm:latest":
+"mongodb@npm:^4.3.1":
   version: 4.3.1
   resolution: "mongodb@npm:4.3.1"
   dependencies:
@@ -2973,6 +2984,14 @@ __metadata:
   version: 1.2.1
   resolution: "node-forge@npm:1.2.1"
   checksum: af4f88c3f69362359f35f6a9e231b35c96d906eeb6e976fb92742afe7fcdd76439dc22b41ce3755389d171f6320756ec7505bdfa7b252466c091b8c519a22674
+  languageName: node
+  linkType: hard
+
+"node-fs@npm:~0.1.5":
+  version: 0.1.7
+  resolution: "node-fs@npm:0.1.7"
+  checksum: 370917b2eb7ccb469801ae151b6b4162082ec4226ecf7ce0a7a0870e3b3bf67607fa2e0ef4b99ea8edd080821aef23b571a2774c02f2ee5742383e99c24cd837
+  conditions: (os=linux | os=darwin | os=freebsd | os=win32 | os=smartos | os=sunos)
   languageName: node
   linkType: hard
 
@@ -4181,6 +4200,13 @@ __metadata:
     tr46: ~0.0.3
     webidl-conversions: ^3.0.0
   checksum: b8daed4ad3356cc4899048a15b2c143a9aed0dfae1f611ebd55073310c7b910f522ad75d727346ad64203d7e6c79ef25eafd465f4d12775ca44b90fa82ed9e2c
+  languageName: node
+  linkType: hard
+
+"when@npm:~2.0.1":
+  version: 2.0.1
+  resolution: "when@npm:2.0.1"
+  checksum: eced9cd44b5148f991152bb4ac414a48c04e24c6149103026f191a5d7f87d39721b013fc822b8e98f40466c5fee844ada3e231221d090cdaf6e84945a5f5192b
   languageName: node
   linkType: hard
 

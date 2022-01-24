@@ -2,7 +2,7 @@ import express from "express";
 import http from "http";
 import { Server } from "socket.io";
 import proxy from "express-http-proxy";
-import mongodb from "mongodb";
+import { MongoClient } from "mongodb";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-const dbclient = new mongodb.MongoClient(
+const dbclient = new MongoClient(
     "mongodb://localhost:27017/opendocs_testing"
 );
 
@@ -48,6 +48,7 @@ async function main() {
                 );
             });
         });
+
         // Routes
         app.get("/api", api);
         app.get("/api/*", api);
