@@ -16,7 +16,10 @@ const port = process.env.PORT || 4500;
 // const frontendPort = process.env.FRONTEND_PORT || 4501;
 const frontendPort = process.env.FRONTEND_PORT || 8086;
 const apiPort = process.env.API_PORT || 4502;
-const frontend = proxy(`http://${process.env.FRONTEND_HOST || "localhost"}:${frontendPort}`, {});
+const frontend = proxy(
+    `http://${process.env.FRONTEND_HOST || "localhost"}:${frontendPort}`,
+    {}
+);
 const api = proxy(`http://${process.env.API_HOST || "localhost"}:${apiPort}`);
 
 const servlet = http.createServer(app);
@@ -26,7 +29,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(fileUpload({}));
 
-const dbclient = new MongoClient(`mongodb://${process.env.MONGODB_HOST || "localhost"}:${process.env.MONGODB_PORT || 27017}/opendocs_testing`);
+const dbclient = new MongoClient(
+    `mongodb://${process.env.MONGODB_HOST || "localhost"}:${
+        process.env.MONGODB_PORT || 27017
+    }/opendocs_testing`
+);
 
 async function main() {
     try {
@@ -44,7 +51,9 @@ async function main() {
                 // const id = "61ba64ed142ea93ba3343990";
                 socket.emit("initialUserData", {});
             });
-            socket.on("document", () => {});
+            socket.on("document", () => {
+                console.log(`Document?`);
+            });
             socket.on("disconnect", () => {
                 console.log(
                     `${socket.id} | Client disconnected! | { id: ${socket.id}, ip: ${socket.handshake.address} }`
@@ -66,6 +75,7 @@ async function main() {
                 const k_ = k[i];
                 const f = files[k_];
                 if (Array.isArray(f)) {
+                    // TODO: do something here
                 } else {
                     const fuuid = uuid.v4();
                     const fname =
@@ -121,9 +131,7 @@ async function main() {
         app.post("/*", frontend);
 
         servlet.listen(port, () => {
-            console.log(
-                `⚡️ [server] Proxy listening on port ${port}.`
-            );
+            console.log(`⚡️ [server] Proxy listening on port ${port}.`);
         });
     } catch (err) {
         console.log(err);
@@ -136,9 +144,7 @@ async function main() {
         });
 
         servlet.listen(port, () => {
-            console.log(
-                `⚡️ [server] Proxy listening on port ${port}.`
-            );
+            console.log(`⚡️ [server] Proxy listening on port ${port}.`);
         });
     } finally {
         dbclient.close();
